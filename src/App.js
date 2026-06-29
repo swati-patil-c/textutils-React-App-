@@ -94,16 +94,16 @@ function App() {
 }
   return (
     <>
-    {/* <div className="container my-5" > */}
+    {/* <div className="container my-5" >
     <Router>
       <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
       <Alert alert={alert} />
-      <div className="container my-5" >
+      <div className="container my-5" > */}
          
          {/* /user --> component1
          /user/stud/ --->component2 (return user comp1 for this we use exact) */}
 
-        <Routes>
+        {/* <Routes>
           <Route exact path="/about" element={<About mode={mode} themeColors={themeColors}/>}
          />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>}
@@ -111,12 +111,14 @@ function App() {
         </Routes>
         </div>
         </Router>
-         
+          */}
       
-        {/* <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
+      <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
       <Alert alert={alert} />
+      <div className="container">
       <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>
-        <About/> */}
+        {/* <About/> */}
+        </div>
        
     </>
   );
