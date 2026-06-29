@@ -17,6 +17,7 @@ export default function TextForm(props) {
       let newText = text.toUpperCase();
       setText(newText);
       props.showAlert("Uppercase converted" , "success");
+      document.title = "Textutils - Uppercase"
       
     }
     const handleOnchange = (event)=>{ // we use event object so we can enter our text in textarea
@@ -28,6 +29,7 @@ export default function TextForm(props) {
     let newtext = text.toLowerCase();
     setText(newtext);
     props.showAlert("Lowercase converted" , "success")
+    //document.title = "Textutils - Lower"
     
     }
     
@@ -36,6 +38,7 @@ export default function TextForm(props) {
       setText(newtext);
       setUnique([]);
       props.showAlert("Clear text!!" , "success");
+      //document.title = "Textutils - clear"
     }
 
     const handleDuplicate = ()=>{
@@ -44,6 +47,7 @@ export default function TextForm(props) {
       setText(unique.join(" ")); // join work on array not on set
       setUnique(unique);
       props.showAlert("Duplicate has been removed.." , "success")
+      //document.title = "Textutils - Remove_duplicate"
     }
 //... - spread op taht take all itme from smthing iterable and spraed them out
     const handleArrangemnt = ()=>{
@@ -55,6 +59,7 @@ export default function TextForm(props) {
       setText(sorted.join(' '));
       setUnique([]);
       props.showAlert("Sorted in Aplhabetical order!" , "success")
+      //document.title = "Textutils - AplhabeticleOrder"
     }
 
     const handleCopy = ()=>{

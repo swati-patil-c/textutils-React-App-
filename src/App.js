@@ -5,6 +5,13 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
+import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
+// import{
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
   const [mode , setMode] = useState("light");// waether thye dark mode is enbale or not
@@ -73,20 +80,44 @@ function App() {
     setMode('dark');
     document.body.style.backgroundColor = '#1D546D';
     showAlert("dark mode enabled", "success");
+    // setInterval(() =>{
+    //   document.title = " Textutils is Amazing applicatio"
+    // } ,1500)
   }else{
     setMode('light');
     document.body.style.backgroundColor = 'white';
     showAlert("light mode enabled", "success");
+    // setInterval(() =>{
+    //   document.title = " install Textutils in amazing mode applicatio"
+    // } ,1000)
   }
 }
   return (
     <>
+    {/* <div className="container my-5" > */}
+    <Router>
       <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
       <Alert alert={alert} />
       <div className="container my-5" >
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>
-        {/* <About/> */}
-      </div>
+         
+         {/* /user --> component1
+         /user/stud/ --->component2 (return user comp1 for this we use exact) */}
+
+        <Routes>
+          <Route exact path="/about" element={<About mode={mode} themeColors={themeColors}/>}
+         />
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>}
+           />
+        </Routes>
+        </div>
+        </Router>
+         
+      
+        {/* <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
+      <Alert alert={alert} />
+      <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>
+        <About/> */}
+       
     </>
   );
 }
