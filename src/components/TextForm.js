@@ -4,11 +4,7 @@ import React, { useState } from 'react'
 //const [text, setText] = useState('Enter text here..');
 
 export default function TextForm(props) {
-<<<<<<< HEAD
 
-  
-=======
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
   //Declare a new state variable , whoch we'll call text
   const [text, setText] = useState(' ');
   const [unique, setUnique] = useState([]); //storing array
@@ -70,17 +66,17 @@ export default function TextForm(props) {
     const handleCopy = ()=>{
       console.log("i am copyingg...")
       let textarea = document.getElementById("myBox");
-<<<<<<< HEAD
-      props.showAlert("Copied to clipboard" , "warning");
-      textarea.select();
-      navigator.clipboard.writeText(text);
-      document.getSelection().removeAllRanges();
-=======
+
       props.showAlert("Copied to clipboard" , "warning")
       
       textarea.select();
       navigator.clipboard.writeText(text);
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
+
+      props.showAlert("Copied to clipboard" , "warning");
+      textarea.select();
+      navigator.clipboard.writeText(text);
+      document.getSelection().removeAllRanges();
+
     }
 
     const handleExtraSpace = ()=>{
@@ -101,11 +97,10 @@ export default function TextForm(props) {
     const charcount = text.trim().length;
   return (
     <>
-    <div className="containerd" style={{color: props.mode=== 'light'?'black':'white', backgroundColor: themeColors[mode].bg,color: themeColors[mode].text }}>
-<<<<<<< HEAD
+    <div className="containerd" style={{ backgroundColor: themeColors[mode].bg,color: themeColors[mode].text }}>
         <h3 className='mb-3'> {props.heading} </h3>
         <div className="mb-3">
-        <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnchange} style={{backgroundColor: props.mode=== 'light'?'white':'#edece5', color: props.mode=== 'dark'?'#000000':'black', color: props.mode === 'dark' ? '#000000' : 'black'}}></textarea>
+        <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnchange} style={{backgroundColor: props.mode=== 'light'?'white':'#edece5', color: props.mode=== 'dark'?'#000000':'black'}}></textarea>
         <div className="container py-3" >
         <button disabled={text.length===0} className={`btn ${getBtnClass()} btn-space me-3 mx-1 my-1`} onClick={handleUpClick} >Convert to upper case</button>
         <button disabled={text.length===0} className={`btn ${getBtnClass()} btn-space me-3 mx-1 my-1`} onClick={handleLowClick} >Convert to Lower case</button>
@@ -115,39 +110,25 @@ export default function TextForm(props) {
         <button disabled={text.length===0} className={`btn ${getBtnClass()} btn-space me-3 mx-1 my-1`} onClick={handleArrangemnt}>Arrange in Alphabeticle order</button>
         <button disabled={text.length===0} className={`btn ${getBtnClass()} btn-space me-3 mx-1 my-1`} onClick={handleCopy} >Copy</button>
         <button disabled={text.length===0} className={`btn ${getBtnClass()} btn-space me-3 mx-1 my-1`} onClick={handleExtraSpace} >Remove Extra SPace</button>
-=======
-        <h3>{props.heading}  </h3>
-        <div className="mb-3">
-        <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnchange} style={{backgroundColor: props.mode=== 'light'?'white':'#edece5', color: props.mode=== 'dark'?'#000000':'black', color: props.mode === 'dark' ? '#000000' : 'black'}}></textarea>
-        <div className="container py-3" >
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleUpClick}>Convert to upper case</button>
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleLowClick} >Convert to Lower case</button>
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleclear} >Clear text</button>
-
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleDuplicate}>Remove Duplicate Sentense</button>
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleArrangemnt}>Arrange in Alphabeticle order</button>
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleCopy} >Copy</button>
-        <button className={`btn ${getBtnClass()} btn-space me-3`} onClick={handleExtraSpace} >Remove Extra SPace</button>
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
         
        </div> 
       </div>
     </div>
 
-    <div className="container  my-3 " style={{color: props.mode=== 'light'?'black':'white', background: themeColors[mode].bg, color: themeColors[mode].text}}>
+    <div className="container  my-3 " style={{background: themeColors[mode].bg, color: themeColors[mode].text}}>
       <h2>Your text summary</h2>
       <p><b>{wordcount} words and  {charcount} characters</b> </p>
-<<<<<<< HEAD
-      <p>{0.008 * text.split(/\s+/).filter((element) => element.length !== 0).length} Minutes read</p>
-      {/* text.split[" "].filter{(element)=>{return element.length!==0}} for wordcount*/}
-      <h3>Preview</h3>
-      <p>{text.length>0?text:"Nothing to preview"}</p>
-=======
+
       <p>{0.008*text.split(" ").length} Minutes read</p>
 
       <h3>Preview</h3>
       <p>{text}</p>
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
+
+      <p>{0.008 * text.split(/\s+/).filter((element) => element.length !== 0).length} Minutes read</p>
+      {/* text.split[" "].filter{(element)=>{return element.length!==0}} for wordcount*/}
+      <h3>Preview</h3>
+      <p>{text.length>0?text:"Nothing to preview"}</p>
+
       <div className="me my-3">
       <h3>Unique words:</h3>
       <p> 

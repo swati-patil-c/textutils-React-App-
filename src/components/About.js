@@ -15,7 +15,6 @@ export default function About({mode, themeColors}) {
     // to set colour according to background
     const mystyla = {
         backgroundColor: themeColors[mode]?.bg || 'white',
-<<<<<<< HEAD
         color: themeColors[mode]?.text || '#228dbf',
         border: '1px solid white'
     }
@@ -27,12 +26,6 @@ export default function About({mode, themeColors}) {
     }
     
 
-=======
-        color: themeColors[mode]?.text || 'black',
-        border: '1px solid white'
-    }
-
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
 
     const[btntext, setBtnText] = useState('Enable dark mode');
 
@@ -58,23 +51,13 @@ export default function About({mode, themeColors}) {
 
   return (
     <div>
-<<<<<<< HEAD
         <div className='container px-0 my-3'   style={{color: 'white'}} >
         <h2 className='my-3' style={{color: mode === 'black'?'white':'#04243'}}> About us</h2>
-        <div className="accordion" id="accordionExample" sty={sty} >
+        <div className="accordion" id="accordionExample" style={sty} >
     <div className="accordion-item">
         <h2 className="accordion-header">
         <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={mystyla} >
         <strong>#What is Textutils ?</strong>
-=======
-        <div className='container px-0 my-3'  style={mystyla}  >
-        <h2> About us</h2>
-        <div className="accordion" id="accordionExample" style={mystyla} >
-    <div className="accordion-item">
-        <h2 className="accordion-header">
-        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={mystyla} >
-            #What is Textutils ?
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
         </button>
         </h2>
         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -86,11 +69,7 @@ export default function About({mode, themeColors}) {
     <div className="accordion-item">
         <h2 className="accordion-header">
         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={mystyla} >
-<<<<<<< HEAD
         <strong>Text Oraginzation and sorting</strong>
-=======
-            Text Oraginzation and sorting
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
         </button>
         </h2>
         <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -102,11 +81,7 @@ export default function About({mode, themeColors}) {
     <div className="accordion-item">
         <h2 className="accordion-header">
         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={mystyla} >
-<<<<<<< HEAD
         <strong>Real-Time Text Analytics </strong>
-=======
-            Real-Time Text Analytics
->>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
         </button>
         </h2>
         <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
