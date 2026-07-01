@@ -27,9 +27,12 @@
 .App-link {
   color: #61dafb;
 }
+<<<<<<< HEAD
 .mem{
   color: 'white';
 }
+=======
+>>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
 
 @keyframes App-logo-spin {
   from {

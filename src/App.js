@@ -94,6 +94,7 @@ function App() {
 }
   return (
     <>
+<<<<<<< HEAD
     
     
     <Router>
@@ -108,10 +109,26 @@ function App() {
           <Route exact path="/about" element={<About mode={mode} themeColors={themeColors}/>}
          />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils : Word counter, Charcter Counter, Remove Extra Space" mode={mode} themeColors={themeColors}/>}
+=======
+    {/* <div className="container my-5" >
+    <Router>
+      <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
+      <Alert alert={alert} />
+      <div className="container my-5" > */}
+         
+         {/* /user --> component1
+         /user/stud/ --->component2 (return user comp1 for this we use exact) */}
+
+        {/* <Routes>
+          <Route exact path="/about" element={<About mode={mode} themeColors={themeColors}/>}
+         />
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>}
+>>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
            />
         </Routes>
         </div>
         </Router>
+<<<<<<< HEAD
          
       
       {/* <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
@@ -120,6 +137,16 @@ function App() {
       <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>
         <About/> */}
        
+=======
+          */}
+      
+      <Navbar title="Textutils" about="About us" mode={mode} changeTheme={changeTheme} toggleMode={toggleMode} themeColors={themeColors} />
+      <Alert alert={alert} />
+      <div className="container">
+      <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} themeColors={themeColors}/>
+        {/* <About/> */}
+        </div>
+>>>>>>> ed21b575a78bd49bc7ae7159dc3a724648ac9e7b
        
     </>
   );
